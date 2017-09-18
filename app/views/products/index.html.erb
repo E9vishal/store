@@ -1,0 +1,16 @@
+<h1>Products</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Description</th>
+  </tr>
+  <% @Products.each do |product| %>
+    <tr>
+      <td><%= product.Name %></td>
+      <td><%= product.Code %></td>
+      <td><%= product.Description%></td>
+    </tr>
+  <% end %>
+</table>

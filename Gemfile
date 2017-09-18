@@ -22,6 +22,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -38,6 +40,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "omniauth-salesforce"
+gem "restforce"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -56,9 +60,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
  # spree gem for shoping cart
-  gem 'spree', '~> 3.2.1'
+  gem 'spree', '~> 3.2.3'
   gem 'spree_auth_devise', github: 'spree/spree_auth_devise' 
   gem 'spree_gateway', github: 'spree/spree_gateway'
+  gem 'spree_api'
+  
   
   
   
@@ -68,4 +74,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'spree_braintree_vzero', github: 'spree-contrib/spree_braintree_vzero'
-gem 'spree_delivery_slots', git: 'https://github.com/vinsol-spree-contrib/spree-delivery-slots'
+gem 'spree_delivery_slots', git: 'https://github.com/vinsol-spree-contrib/spree-delivery-slots', branch: '3-2-stable'
+gem 'spree_active_shipping', github: 'spree-contrib/spree_active_shipping'

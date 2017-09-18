@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824144253) do
+ActiveRecord::Schema.define(version: 20170913091953) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20170824144253) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "salesforce_users", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.string   "refresh_token"
+    t.string   "instance_url"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "spree_addresses", force: :cascade do |t|
@@ -391,6 +402,16 @@ ActiveRecord::Schema.define(version: 20170824144253) do
     t.index ["option_type_id"], name: "index_spree_product_option_types_on_option_type_id"
     t.index ["position"], name: "index_spree_product_option_types_on_position"
     t.index ["product_id"], name: "index_spree_product_option_types_on_product_id"
+  end
+
+  create_table "spree_product_packages", force: :cascade do |t|
+    t.integer  "product_id",             null: false
+    t.integer  "length",     default: 0, null: false
+    t.integer  "width",      default: 0, null: false
+    t.integer  "height",     default: 0, null: false
+    t.integer  "weight",     default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "spree_product_promotion_rules", force: :cascade do |t|

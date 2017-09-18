@@ -21,3 +21,6 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+
+Spree::Api::Config[:requires_authentication] = true
+

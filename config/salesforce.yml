@@ -1,0 +1,17 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+development: &default
+  client_key: '3MVG9ZL0ppGP5UrB4eTXtDuUmRsEmiRsrVokdHqzm_3KVdSOFLssDMjx_wf6tHDt2xy8tlWRrsoN3YEHWxYUa'
+  client_secret: '5101577670903841533'
+
+test:
+  <<: *default
+
+production:
+  client_key: '3MVG9ZL0ppGP5UrB4eTXtDuUmRsEmiRsrVokdHqzm_3KVdSOFLssDMjx_wf6tHDt2xy8tlWRrsoN3YEHWxYUa'
+  client_secret: '5101577670903841533'
+
